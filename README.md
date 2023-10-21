@@ -12,7 +12,9 @@ Lingua is a NIF-based bridge for the [lingua][2] [Rust][1] language detection li
 Empty. I'll write here in the future.
 
 
+# License
 
+[Apache License v2](./LICENSE), and lingua-rs is also [Apache License v2](https://github.com/pemistahl/lingua-rs/blob/master/LICENSE).
 
 
 
