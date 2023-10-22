@@ -1,3 +1,3 @@
-pub mod language;
-pub mod detector;
 pub mod builder;
+pub mod detector;
+pub mod language;
