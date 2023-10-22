@@ -812,7 +812,7 @@ dependencies = [
 
 [[package]]
 name = "lingua-py"
-version = "0.1.1"
+version = "0.1.1-alpha.18"
 dependencies = [
  "lingua",
  "pyo3",
