@@ -2,7 +2,7 @@ use super::{detector::PyLanguageDetector, language::PyLanguage};
 use lingua::{Language, LanguageDetectorBuilder};
 use pyo3::{prelude::*, types::PyList};
 
-#[pyclass(name="LanguageDetectorBuilder")]
+#[pyclass(name = "LanguageDetectorBuilder")]
 pub struct PyLanguageDetectorBuilder {
     builder: LanguageDetectorBuilder,
 }
@@ -32,10 +32,11 @@ impl PyLanguageDetectorBuilder {
     #[staticmethod]
     pub fn from_languages(py_languages: &PyList) -> Self {
         let languages: Vec<Language> = py_languages
-        .extract::<Vec<Py<PyLanguage>>>().unwrap()
-        .iter()
-        .map(|lang| PyLanguage::clone_from_py(lang).into())
-        .collect();
+            .extract::<Vec<Py<PyLanguage>>>()
+            .unwrap()
+            .iter()
+            .map(|lang| PyLanguage::clone_from_py(lang).into())
+            .collect();
         //let languages: Vec<Language> = py_languages.clone().into_iter().map(|lang| (*lang).into()).collect();
         Self {
             builder: LanguageDetectorBuilder::from_languages(&languages),

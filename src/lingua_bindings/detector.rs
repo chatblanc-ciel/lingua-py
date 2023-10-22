@@ -1,9 +1,9 @@
-use pyo3::prelude::*;
 use lingua::LanguageDetector;
+use pyo3::prelude::*;
 
 use super::language::PyLanguage;
 
-#[pyclass(name="LanguageDetector")]
+#[pyclass(name = "LanguageDetector")]
 pub struct PyLanguageDetector {
     pub(crate) detector: LanguageDetector,
 }
