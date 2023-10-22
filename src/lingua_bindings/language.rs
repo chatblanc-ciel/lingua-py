@@ -3,7 +3,7 @@
 use lingua::Language;
 use pyo3::prelude::*;
 
-#[pyclass(frozen)]
+#[pyclass(name="Language",frozen)]
 #[derive(Clone, Copy, Debug)]
 pub enum PyLanguage {
     Afrikaans,
