@@ -18,3 +18,21 @@ fn lingua_py(_py: Python, m: &PyModule) -> PyResult<()> {
     Ok(())
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_lingua_usage() {
+        use lingua::Language::{English, French, German, Spanish};
+        use lingua::{Language, LanguageDetector, LanguageDetectorBuilder};
+
+        let languages = vec![English, French, German, Spanish];
+        let detector: LanguageDetector =
+            LanguageDetectorBuilder::from_languages(&languages).build();
+        let detected_language: Option<Language> =
+            detector.detect_language_of("languages are awesome");
+
+        assert_eq!(detected_language, Some(English));
+    }
+}
