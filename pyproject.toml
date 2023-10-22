@@ -24,3 +24,11 @@ Repository = "https://github.com/me/spam.git"
 
 [tool.maturin]
 features = ["pyo3/extension-module"]
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pip>=23.3.1",
+    "pytest>=7.4.2",
+    "black>=23.3.0",
+]
