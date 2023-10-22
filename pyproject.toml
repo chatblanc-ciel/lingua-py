@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "lingua-py"
-requires-python = ">=3.7"
+requires-python = ">=3.11,<3.12"
 description = "Python bindings for the Lingua(LanguageDetect) Rust library"
 classifiers = [
     "Programming Language :: Rust",
@@ -20,10 +20,11 @@ authors = [
   {name = "chatblanc", email = "73688885+chatblanc-ciel@users.noreply.github.com"},
 ]
 [project.urls]
-Repository = "https://github.com/me/spam.git"
+Repository = "https://github.com/chatblanc-ciel/lingua-py.git"
 
 [tool.maturin]
 features = ["pyo3/extension-module"]
+python-source = "python"
 
 [tool.rye]
 managed = true
@@ -31,4 +32,11 @@ dev-dependencies = [
     "pip>=23.3.1",
     "pytest>=7.4.2",
     "black>=23.3.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = "python"
+testpaths = ["python/tests",]
+addopts = [
+    "--import-mode=importlib",
 ]
