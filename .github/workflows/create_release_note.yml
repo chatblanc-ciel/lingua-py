@@ -1,4 +1,4 @@
-name: release
+name: create_release_note
 
 on:
   workflow_call:

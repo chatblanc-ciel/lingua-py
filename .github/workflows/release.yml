@@ -1,4 +1,4 @@
-name: auto_tagging
+name: release
 
 on:
   push:
@@ -30,9 +30,11 @@ jobs:
           dry_run: true
   create_release_note:
     needs: tag
-    uses: ./.github/workflows/create_release_doc.yml
+    uses: ./.github/workflows/create_release_note.yml
     with:
       tag: ${{ needs.tag.outputs.current_tag }}
   publish:
     needs: create_release_note
     uses: ./.github/workflows/CI.yml
+    with:
+      publish: true
