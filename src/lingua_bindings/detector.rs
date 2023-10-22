@@ -3,7 +3,7 @@ use lingua::LanguageDetector;
 
 use super::language::PyLanguage;
 
-#[pyclass]
+#[pyclass(name="LanguageDetector")]
 pub struct PyLanguageDetector {
     pub(crate) detector: LanguageDetector,
 }

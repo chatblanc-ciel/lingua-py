@@ -2,7 +2,7 @@ use super::{detector::PyLanguageDetector, language::PyLanguage};
 use lingua::{Language, LanguageDetectorBuilder};
 use pyo3::{prelude::*, types::PyList};
 
-#[pyclass]
+#[pyclass(name="LanguageDetectorBuilder")]
 pub struct PyLanguageDetectorBuilder {
     builder: LanguageDetectorBuilder,
 }
