@@ -30,7 +30,7 @@ jobs:
           dry_run: true
   create_release_note:
     needs: tag
-    uses: ./.github/workflows/create_release_doc.yml
+    uses: ./.github/workflows/create_release_note.yml
     with:
       tag: ${{ needs.tag.outputs.current_tag }}
   publish:
