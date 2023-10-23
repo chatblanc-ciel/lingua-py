@@ -1,4 +1,4 @@
-name: auto_tagging
+name: release
 
 on:
   push:
@@ -36,3 +36,5 @@ jobs:
   publish:
     needs: create_release_note
     uses: ./.github/workflows/CI.yml
+    with:
+      publish: true
