@@ -1,6 +1,4 @@
 <div align="center">
-
-  ![lingua](https://raw.githubusercontent.com/pemistahl/lingua-rs/main/images/logo.png)
   
   ![Static Badge](https://img.shields.io/badge/dependency_version%3Alingua-1.5.0-blue)
   [![build status](https://github.com/chatblanc-ciel/lingua-py/actions/workflows/CI.yml/badge.svg)](https://github.com/chatblanc-ciel/lingua-py/actions/workflows/CI.yml)
@@ -13,6 +11,8 @@
 # Lingua-py
 
 Lingua-py is an Python wrapper for the [Rust][1] [lingua][2] crate with [PyO3/Maturin][4].
+This project is informal. It is expected that Python-binding will be developed [officially][2] in the future.
+
 
 ## Summary
 
